@@ -20,7 +20,7 @@ public class UIDemo : MonoBehaviour
 
     private void Update()
     {
-        sr.color = Color.Lerp(start,end, (interpolation/60));
+        sr.color = Color.Lerp(start, end, (interpolation/60));
     }
 
     public void DropdownSelectionChange(Int32 value)
