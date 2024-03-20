@@ -9,6 +9,7 @@ public class CharacterControl : MonoBehaviour
 {
     public TextMeshProUGUI WhatIsSelectedText;
     public static CharacterControl charcontroller;
+    public List<Villager> villagerList;
     private void Start()
     {
         if (charcontroller == null) 
@@ -16,6 +17,17 @@ public class CharacterControl : MonoBehaviour
             charcontroller = this;
             charcontroller.WhatIsSelectedText.text = "Nothing selected";
         }
+    }
+
+    //private void OnMouseDown()
+    //{
+    //    CharacterControl.SetSelectedVillager(this);
+    //    clickingOnSelf = true;
+    //}
+
+    public void DropboxSelection(int value)
+    {
+        CharacterControl.SetSelectedVillager(villagerList[value]);
     }
 
     public static Villager SelectedVillager { get; private set; }

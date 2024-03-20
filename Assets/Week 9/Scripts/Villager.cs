@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Villager : MonoBehaviour
 {
+    public TextMeshProUGUI nameBox;
     Rigidbody2D rb;
     Animator animator;
 
@@ -23,6 +25,8 @@ public class Villager : MonoBehaviour
         animator = GetComponent<Animator>();
         destination = transform.position;
         Selected(false);
+
+        nameBox.text = this.name;
     }
     public void Selected(bool value)
     {
@@ -30,11 +34,11 @@ public class Villager : MonoBehaviour
         highlight.SetActive(isSelected);
     }
 
-    private void OnMouseDown()
-    {
-        CharacterControl.SetSelectedVillager(this);
-        clickingOnSelf = true;
-    }
+    //private void OnMouseDown()
+    //{
+    //    CharacterControl.SetSelectedVillager(this);
+    //    clickingOnSelf = true;
+    //}
 
     private void OnMouseUp()
     {
