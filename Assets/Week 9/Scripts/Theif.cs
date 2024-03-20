@@ -8,12 +8,15 @@ public class Theif : Villager
     public GameObject DaggerPrefab;
     public Transform spawnpoint;
     public float dashspeed = 7;
-    //float timer;
-    //float dashTime = 2;
-    //bool isDashing;
+    Coroutine dashing;
+
     protected override void Attack()
     {
-        StartCoroutine(dash());
+        if(dashing != null)
+        {
+            StopCoroutine(dashing);
+        }
+        dashing = StartCoroutine(dash());
     }
 
     IEnumerator dash()
