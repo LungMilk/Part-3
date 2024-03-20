@@ -14,7 +14,7 @@ public class CharacterControl : MonoBehaviour
         if (charcontroller == null) 
         {
             charcontroller = this;
-            charcontroller.WhatIsSelectedText.text = string.Empty;
+            charcontroller.WhatIsSelectedText.text = "Nothing selected";
         }
     }
 
