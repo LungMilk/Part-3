@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 public class Building : MonoBehaviour
 {
@@ -18,16 +19,30 @@ public class Building : MonoBehaviour
 
     void Start()
     {
-        firstObjroutine = StartCoroutine(firstObjIncrease());
-        secondObjroutine = StartCoroutine(secondObjIncrease());
-        thirdObjroutine = StartCoroutine(thirdObjIncrease());
+        if (firstObjroutine != null)
+        {
+            StopCoroutine(ObjIncrease(firstObj));
+        }
+        firstObjroutine = StartCoroutine(ObjIncrease(firstObj));
     }
 
     // Update is called once per frame
     void Update()
     {
         interpolation += Time.deltaTime * 1;
-        if (thirdObj.localScale ==endSize)
+        interpolation = interpolation % 50;
+
+        if (firstObj.localScale == endSize && secondObjroutine == null)
+        {
+            secondObjroutine = StartCoroutine(ObjIncrease(secondObj));
+        }
+
+        if (secondObj.localScale == endSize && thirdObjroutine == null)
+        {
+            thirdObjroutine = StartCoroutine(ObjIncrease(thirdObj));
+        }
+
+        if (thirdObj.localScale == endSize)
         {
             StopAllCoroutines();
         }
@@ -36,30 +51,15 @@ public class Building : MonoBehaviour
         //the scale of hte object must incrate over a linear interval to have a constant increase and should do one at a time
 
     }
-    IEnumerator firstObjIncrease()
+    //current issue is that once this is done it does not go to the next one
+    //elegant idea could be to pass it the object 
+    IEnumerator ObjIncrease(Transform objectToTransform)
     {
-        while (firstObj.localScale !=endSize)
+        interpolation = 0;
+        while (objectToTransform.localScale != endSize)
         {
-            firstObj.localScale = Vector3.Lerp(startSize, endSize, interpolation);
+            objectToTransform.localScale = Vector3.Lerp(startSize, endSize, interpolation);
             yield return null;
         }
-    }
-
-    IEnumerator secondObjIncrease()
-    {
-        //better if the while loop is related to conditionals that interupt the coroutine
-        while (firstObj.localScale == endSize && secondObj.localScale != endSize)
-        {
-            secondObj.localScale = Vector3.Lerp(startSize, endSize, interpolation);
-            yield return null;
-        }
-    }
-    IEnumerator thirdObjIncrease()
-    {
-        while (secondObj.localScale != endSize)
-        { 
-            yield return null;
-        }
-        thirdObj.localScale = Vector3.Lerp(startSize, endSize, interpolation);
     }
 }
