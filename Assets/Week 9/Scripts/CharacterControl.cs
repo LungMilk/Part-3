@@ -30,6 +30,13 @@ public class CharacterControl : MonoBehaviour
         CharacterControl.SetSelectedVillager(villagerList[value]);
     }
 
+    public void sizeIncrease(Single value)
+    {
+        //issue as it returns to its original size after it changes
+        SelectedVillager.transform.localScale = new Vector3(value,value,value);
+        SelectedVillager.size = value;
+    }
+
     public static Villager SelectedVillager { get; private set; }
     public static void SetSelectedVillager(Villager villager)
     {
@@ -41,5 +48,4 @@ public class CharacterControl : MonoBehaviour
         SelectedVillager = villager;
         SelectedVillager.Selected(true);
     }
-    
 }
