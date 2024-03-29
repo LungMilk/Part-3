@@ -19,7 +19,7 @@ public class Card : MonoBehaviour
     int health;
     int damage;
 
-    int offset;
+    int offset =0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,8 @@ public class Card : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
         rgd2d = GetComponent<Rigidbody2D>();
         randomization();
+
+        offset = 0;
     }
 
     // Update is called once per frame
@@ -52,15 +54,17 @@ public class Card : MonoBehaviour
 
     IEnumerator selectAnimation()
     {
-        while (offset < 1)
+        while (rgd2d.transform.position.y <= 1)
         {
             rgd2d.transform.Translate(transform.up * 2 * Time.deltaTime);
             yield return null;
+            
         }
-        while (offset > -8)
+        while (rgd2d.transform.position.y >= -10)
         {
-            rgd2d.transform.Translate(transform.up * 2 * Time.deltaTime);
+            rgd2d.transform.Translate(transform.up  * -3 * Time.deltaTime);
             yield return null;
+            offset--;
         } 
     }
 }

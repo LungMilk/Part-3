@@ -2465,6 +2465,7 @@ MonoBehaviour:
   HealthText: {fileID: 0}
   DamageText: {fileID: 0}
   DescriptionText: {fileID: 0}
+  rgd2d: {fileID: 0}
 --- !u!1 &1078519433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,6 +3651,7 @@ MonoBehaviour:
   HealthText: {fileID: 0}
   DamageText: {fileID: 0}
   DescriptionText: {fileID: 0}
+  rgd2d: {fileID: 0}
 --- !u!1 &1754456701
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,6 +4644,7 @@ MonoBehaviour:
   HealthText: {fileID: 818198953}
   DamageText: {fileID: 1187287178}
   DescriptionText: {fileID: 979491373}
+  rgd2d: {fileID: 0}
 --- !u!1 &2079773247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,6 +4978,7 @@ MonoBehaviour:
   HealthText: {fileID: 0}
   DamageText: {fileID: 0}
   DescriptionText: {fileID: 0}
+  rgd2d: {fileID: 0}
 --- !u!1 &2131071925
 GameObject:
   m_ObjectHideFlags: 0
