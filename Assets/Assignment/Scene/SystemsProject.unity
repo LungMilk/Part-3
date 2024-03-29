@@ -2296,10 +2296,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1024248809}
+  - component: {fileID: 1024248810}
   - component: {fileID: 1024248808}
   - component: {fileID: 1024248807}
   - component: {fileID: 1024248806}
-  - component: {fileID: 1024248805}
   m_Layer: 0
   m_Name: Armour
   m_TagString: Untagged
@@ -2307,23 +2307,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1024248805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024248804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ea94bab4a676946819659d0659ac9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costText: {fileID: 679999284}
-  CardTypeText: {fileID: 1019634169}
-  HealthText: {fileID: 1733215511}
-  DamageText: {fileID: 111798895}
-  DescriptionText: {fileID: 472976538}
 --- !u!61 &1024248806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2377,7 +2360,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024248804}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2465,6 +2448,23 @@ Transform:
   - {fileID: 2131071926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1024248810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024248804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da57325bd5baafc41960ce093731bcdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 0}
+  CardTypeText: {fileID: 0}
+  HealthText: {fileID: 0}
+  DamageText: {fileID: 0}
+  DescriptionText: {fileID: 0}
 --- !u!1 &1078519433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,7 +3484,7 @@ GameObject:
   - component: {fileID: 1747764502}
   - component: {fileID: 1747764501}
   - component: {fileID: 1747764500}
-  - component: {fileID: 1747764499}
+  - component: {fileID: 1747764504}
   m_Layer: 0
   m_Name: Artillery
   m_TagString: Untagged
@@ -3492,23 +3492,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1747764499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747764498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ea94bab4a676946819659d0659ac9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costText: {fileID: 1807283121}
-  CardTypeText: {fileID: 495521325}
-  HealthText: {fileID: 318987538}
-  DamageText: {fileID: 1078519437}
-  DescriptionText: {fileID: 738937245}
 --- !u!61 &1747764500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3562,7 +3545,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747764498}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3650,6 +3633,23 @@ Transform:
   - {fileID: 814499214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747764504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747764498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa48b6e35f3de142ac79338f4b407c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 0}
+  CardTypeText: {fileID: 0}
+  HealthText: {fileID: 0}
+  DamageText: {fileID: 0}
+  DescriptionText: {fileID: 0}
 --- !u!1 &1754456701
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,10 +4806,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081937009}
+  - component: {fileID: 2081937010}
   - component: {fileID: 2081937008}
   - component: {fileID: 2081937007}
   - component: {fileID: 2081937006}
-  - component: {fileID: 2081937005}
   m_Layer: 0
   m_Name: Infantry
   m_TagString: Untagged
@@ -4817,23 +4817,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2081937005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081937004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ea94bab4a676946819659d0659ac9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costText: {fileID: 1836852955}
-  CardTypeText: {fileID: 1983208367}
-  HealthText: {fileID: 886263791}
-  DamageText: {fileID: 279433525}
-  DescriptionText: {fileID: 1209694492}
 --- !u!61 &2081937006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4887,7 +4870,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081937004}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4975,6 +4958,23 @@ Transform:
   - {fileID: 826935685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081937010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081937004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffa189cf1e71e147b9e84b2fead3a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 0}
+  CardTypeText: {fileID: 0}
+  HealthText: {fileID: 0}
+  DamageText: {fileID: 0}
+  DescriptionText: {fileID: 0}
 --- !u!1 &2131071925
 GameObject:
   m_ObjectHideFlags: 0
