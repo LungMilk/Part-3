@@ -11,6 +11,8 @@ public class Card : MonoBehaviour
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI DamageText;
     public TextMeshProUGUI DescriptionText;
+    //cards should not control this
+    public TextMeshProUGUI CardSelectedText;
     SpriteRenderer spr;
     public Rigidbody2D rgd2d;
 
@@ -19,16 +21,12 @@ public class Card : MonoBehaviour
     int health;
     int damage;
 
-    int offset =0;
-
     // Start is called before the first frame update
     void Start()
     {
         spr = GetComponent<SpriteRenderer>();
         rgd2d = GetComponent<Rigidbody2D>();
         randomization();
-
-        offset = 0;
     }
 
     // Update is called once per frame
@@ -42,6 +40,7 @@ public class Card : MonoBehaviour
         Debug.Log(this.ToString() + " Touched");
 
         StartCoroutine(selectAnimation());
+        CardSelectedText.text =this.ToString();
     }
 
     public void randomization()
@@ -64,7 +63,6 @@ public class Card : MonoBehaviour
         {
             rgd2d.transform.Translate(transform.up  * -3 * Time.deltaTime);
             yield return null;
-            offset--;
         } 
     }
 }
