@@ -13,18 +13,19 @@ public class Card : MonoBehaviour
     public TextMeshProUGUI DescriptionText;
     //cards should not control this
     public TextMeshProUGUI CardSelectedText;
-    SpriteRenderer spr;
+    public SpriteRenderer background;
+    public SpriteRenderer Image;
     public Rigidbody2D rgd2d;
 
-    int cost;
-    string cardType;
-    int health;
-    int damage;
+    protected int cost;
+    protected string cardType;
+    protected int health;
+    protected int damage;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        spr = GetComponent<SpriteRenderer>();
+        background = GetComponent<SpriteRenderer>();
         rgd2d = GetComponent<Rigidbody2D>();
         randomization();
     }

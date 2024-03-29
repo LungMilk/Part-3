@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Armour : Card
 {
-    // Start is called before the first frame update
-    void Start()
+    public Sprite Sprite;
+    private void Start()
     {
-        
+        setValues();
+        base.Start();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void setValues()
     {
-        
+        background.color = Color.blue;
+        cost = Random.Range(2, 4);
+        cardType = "Armour";
+        health = Random.Range(3, 8);
+        damage = Random.Range(2, 3);
+        DescriptionText.text = "-1 to incoming damage";
+        Image.sprite = Sprite;
+        Image.color = Color.white;
     }
 }

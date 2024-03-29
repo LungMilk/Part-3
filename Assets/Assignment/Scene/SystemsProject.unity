@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
+  m_fontSize: 3.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 1.6120248, y: 0, z: 1.2726493, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
+  m_fontSize: 3.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 1.1029668, y: 0, z: 1.2726521, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2562,13 +2562,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da57325bd5baafc41960ce093731bcdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costText: {fileID: 0}
-  CardTypeText: {fileID: 0}
-  HealthText: {fileID: 0}
-  DamageText: {fileID: 0}
-  DescriptionText: {fileID: 0}
+  costText: {fileID: 679999284}
+  CardTypeText: {fileID: 1019634169}
+  HealthText: {fileID: 1733215511}
+  DamageText: {fileID: 111798895}
+  DescriptionText: {fileID: 472976538}
   CardSelectedText: {fileID: 1220140224}
+  background: {fileID: 1024248808}
+  Image: {fileID: 2131071927}
   rgd2d: {fileID: 1024248807}
+  Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
 --- !u!1 &1078519433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,7 +3022,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
+  m_fontSize: 3.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3055,7 +3058,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 1.9513988, y: 0, z: 1.4423394, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3719,10 +3722,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747764503}
+  - component: {fileID: 1747764504}
   - component: {fileID: 1747764502}
   - component: {fileID: 1747764501}
   - component: {fileID: 1747764500}
-  - component: {fileID: 1747764504}
   m_Layer: 0
   m_Name: Artillery
   m_TagString: Untagged
@@ -3883,13 +3886,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa48b6e35f3de142ac79338f4b407c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costText: {fileID: 0}
-  CardTypeText: {fileID: 0}
-  HealthText: {fileID: 0}
-  DamageText: {fileID: 0}
-  DescriptionText: {fileID: 0}
+  costText: {fileID: 1807283121}
+  CardTypeText: {fileID: 495521325}
+  HealthText: {fileID: 318987538}
+  DamageText: {fileID: 1078519437}
+  DescriptionText: {fileID: 738937245}
   CardSelectedText: {fileID: 1220140224}
+  background: {fileID: 1747764502}
+  Image: {fileID: 814499215}
   rgd2d: {fileID: 1747764501}
+  Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
 --- !u!1 &1754456701
 GameObject:
   m_ObjectHideFlags: 0
@@ -4883,6 +4889,8 @@ MonoBehaviour:
   DamageText: {fileID: 1187287178}
   DescriptionText: {fileID: 979491373}
   CardSelectedText: {fileID: 0}
+  background: {fileID: 0}
+  Image: {fileID: 0}
   rgd2d: {fileID: 0}
 --- !u!1 &2079773247
 GameObject:
@@ -5212,13 +5220,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffa189cf1e71e147b9e84b2fead3a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costText: {fileID: 0}
-  CardTypeText: {fileID: 0}
-  HealthText: {fileID: 0}
-  DamageText: {fileID: 0}
-  DescriptionText: {fileID: 0}
+  costText: {fileID: 1836852955}
+  CardTypeText: {fileID: 1983208367}
+  HealthText: {fileID: 886263791}
+  DamageText: {fileID: 279433525}
+  DescriptionText: {fileID: 1209694492}
   CardSelectedText: {fileID: 1220140224}
+  background: {fileID: 2081937008}
+  Image: {fileID: 826935686}
   rgd2d: {fileID: 2081937007}
+  Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
 --- !u!1 &2131071925
 GameObject:
   m_ObjectHideFlags: 0

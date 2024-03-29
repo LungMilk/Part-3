@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Artillery : Card
 {
-    // Start is called before the first frame update
-    void Start()
+    public Sprite Sprite;
+    private void Start()
     {
-        
+        setValues();
+        base.Start();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void setValues()
     {
-        
+        background.color = Color.red;
+        cost = Random.Range(1, 4);
+        cardType = "Artillery";
+        health = Random.Range(2, 5);
+        damage = Random.Range(4, 8);
+        DescriptionText.text = "Range of 5 units";
+        Image.sprite = Sprite;
+        Image.color = Color.white;
     }
 }
