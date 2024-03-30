@@ -13,6 +13,7 @@ public class Card : MonoBehaviour
     public TextMeshProUGUI DescriptionText;
     //cards should not control this
     public TextMeshProUGUI CardSelectedText;
+    //
     public SpriteRenderer background;
     public SpriteRenderer Image;
     public Rigidbody2D rgd2d;
@@ -29,13 +30,6 @@ public class Card : MonoBehaviour
         rgd2d = GetComponent<Rigidbody2D>();
         randomization();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDown()
     {
         Debug.Log(this.ToString() + " Touched");
@@ -46,10 +40,10 @@ public class Card : MonoBehaviour
 
     public virtual void randomization()
     {
-        costText.text = cost.ToString();
-        CardTypeText.text = cardType;
-        HealthText.text = health.ToString();
-        DamageText.text = damage.ToString();
+        costText.text = "Cost: " + cost.ToString();
+        CardTypeText.text = "Unit Type: " + cardType;
+        HealthText.text = "Health: " + health.ToString();
+        DamageText.text = "Damage: " + damage.ToString();
     } 
 
     IEnumerator selectAnimation()
