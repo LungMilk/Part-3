@@ -11,12 +11,12 @@ public class Card : MonoBehaviour
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI DamageText;
     public TextMeshProUGUI DescriptionText;
-    //cards should not control this
-    public TextMeshProUGUI CardSelectedText;
-    //
     public SpriteRenderer background;
     public SpriteRenderer Image;
     public Rigidbody2D rgd2d;
+
+    public bool selected;
+    public bool selectable;
 
     protected int cost;
     protected string cardType;
@@ -33,13 +33,17 @@ public class Card : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(this.ToString() + " Touched");
-
-        StartCoroutine(selectAnimation());
-        CardSelectedText.text =this.ToString();
+        if (CardController.selectedCard == null)
+        {
+            StartCoroutine(selectAnimation());
+            CardController.cardSelected(this);
+        }
+        //CardSelectedText.text = this.ToString();
     }
 
     public virtual void randomization()
     {
+        rgd2d.transform.position = new Vector3(rgd2d.transform.position.x, 0, rgd2d.transform.position.z);
         costText.text = "Cost: " + cost.ToString();
         CardTypeText.text = "Unit Type: " + cardType;
         HealthText.text = "Health: " + health.ToString();

@@ -370,6 +370,51 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &191272524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191272525}
+  - component: {fileID: 191272526}
+  m_Layer: 0
+  m_Name: CardController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &191272525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191272524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.8155313, y: -0.2651578, z: -0.048237856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &191272526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191272524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87674e07500f5440ad623ef1d5eb7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardSelectedText: {fileID: 1220140224}
 --- !u!1 &227121941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,10 +2613,11 @@ MonoBehaviour:
   HealthText: {fileID: 1733215511}
   DamageText: {fileID: 111798895}
   DescriptionText: {fileID: 472976538}
-  CardSelectedText: {fileID: 1220140224}
   background: {fileID: 1024248808}
   Image: {fileID: 2131071927}
   rgd2d: {fileID: 1024248807}
+  selected: 0
+  selectable: 0
   Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
 --- !u!1 &1078519433
 GameObject:
@@ -4159,10 +4205,11 @@ MonoBehaviour:
   HealthText: {fileID: 318987538}
   DamageText: {fileID: 1078519437}
   DescriptionText: {fileID: 738937245}
-  CardSelectedText: {fileID: 1220140224}
   background: {fileID: 1747764502}
   Image: {fileID: 814499215}
   rgd2d: {fileID: 1747764501}
+  selected: 0
+  selectable: 0
   Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
 --- !u!1 &1754456701
 GameObject:
@@ -5156,10 +5203,11 @@ MonoBehaviour:
   HealthText: {fileID: 818198953}
   DamageText: {fileID: 1187287178}
   DescriptionText: {fileID: 979491373}
-  CardSelectedText: {fileID: 0}
   background: {fileID: 0}
   Image: {fileID: 0}
   rgd2d: {fileID: 0}
+  selected: 0
+  selectable: 0
 --- !u!1 &2079773247
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,10 +5541,11 @@ MonoBehaviour:
   HealthText: {fileID: 886263791}
   DamageText: {fileID: 279433525}
   DescriptionText: {fileID: 1209694492}
-  CardSelectedText: {fileID: 1220140224}
   background: {fileID: 2081937008}
   Image: {fileID: 826935686}
   rgd2d: {fileID: 2081937007}
+  selected: 0
+  selectable: 0
   Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
 --- !u!1 &2131071925
 GameObject:
@@ -5593,3 +5642,4 @@ SceneRoots:
   - {fileID: 1747764503}
   - {fileID: 1024248809}
   - {fileID: 2081937009}
+  - {fileID: 191272525}
