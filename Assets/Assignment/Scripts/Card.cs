@@ -44,7 +44,7 @@ public class Card : MonoBehaviour
         CardSelectedText.text =this.ToString();
     }
 
-    public void randomization()
+    public virtual void randomization()
     {
         costText.text = cost.ToString();
         CardTypeText.text = cardType;

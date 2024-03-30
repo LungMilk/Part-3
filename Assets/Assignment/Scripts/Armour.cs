@@ -5,12 +5,7 @@ using UnityEngine;
 public class Armour : Card
 {
     public Sprite Sprite;
-    private void Start()
-    {
-        setValues();
-        base.Start();
-    }
-    public void setValues()
+    public override void randomization()
     {
         background.color = Color.blue;
         cost = Random.Range(2, 4);
@@ -20,5 +15,6 @@ public class Armour : Card
         DescriptionText.text = "-1 to incoming damage";
         Image.sprite = Sprite;
         Image.color = Color.white;
+        base.randomization();
     }
 }
