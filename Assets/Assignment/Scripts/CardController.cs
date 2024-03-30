@@ -33,6 +33,7 @@ public class CardController : MonoBehaviour
     public static void cardSelected(Card card)
     {
         selectedCard = card;
+        //cannot make it cardtype for some reason
         cc.CardSelectedText.text = selectedCard.ToString();
     }
 }
