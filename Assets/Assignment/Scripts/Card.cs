@@ -43,6 +43,7 @@ public class Card : MonoBehaviour
 
     public virtual void randomization()
     {
+        StopAllCoroutines();
         rgd2d.transform.position = new Vector3(rgd2d.transform.position.x, 0, rgd2d.transform.position.z);
         costText.text = "Cost: " + cost.ToString();
         CardTypeText.text = "Unit Type: " + cardType;

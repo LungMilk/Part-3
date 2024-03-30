@@ -415,6 +415,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardSelectedText: {fileID: 1220140224}
+  cards:
+  - {fileID: 2081937010}
+  - {fileID: 1024248810}
+  - {fileID: 1747764504}
 --- !u!1 &227121941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3719,9 +3723,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2081937010}
-        m_TargetAssemblyTypeName: Infantry, Assembly-CSharp
-        m_MethodName: randomization
+      - m_Target: {fileID: 191272526}
+        m_TargetAssemblyTypeName: CardController, Assembly-CSharp
+        m_MethodName: reshuffle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
