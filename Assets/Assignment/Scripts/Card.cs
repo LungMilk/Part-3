@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.U2D.IK;
 
 
 public class Card : MonoBehaviour
@@ -24,6 +25,11 @@ public class Card : MonoBehaviour
     protected string cardType;
     protected int health;
     protected int damage;
+
+
+    public AnimationCurve animationCurve;
+    public float lerpTimer;
+    public float interpolation;
 
     // Start is called before the first frame update
     public void Start()
@@ -60,6 +66,8 @@ public class Card : MonoBehaviour
         if (anim != null)
         {
             StopCoroutine(anim);
+            //reset lerp timer
+            lerpTimer = 0;
         }
         //this resets it to the default position, since only x is altered it is the only thing reset as well it allows each to retain their offsets
         rgd2d.transform.position = new Vector3(rgd2d.transform.position.x, 0, rgd2d.transform.position.z);
@@ -67,18 +75,33 @@ public class Card : MonoBehaviour
     //coroutine for hte animation
     IEnumerator selectAnimation()
     {
-        //this gives it a little bump then it goes down
-        while (rgd2d.transform.position.y <= 1)
+        //setting the start and end position
+        Vector3 startPosition = new Vector3(rgd2d.transform.position.x, 0f, rgd2d.transform.position.z);
+        Vector3 endPosition = new Vector3(rgd2d.transform.position.x, -10f, rgd2d.transform.position.z);
+        //the coroutine runs till it reaches the end positon
+        while (rgd2d.transform.position != endPosition)
         {
-            rgd2d.transform.Translate(transform.up * 2 * Time.deltaTime);
+            //using a cool animation curve to give more flow with time for the animation instead of the previous rigid movement
+            interpolation = animationCurve.Evaluate(lerpTimer);
+            //the position values are increasing at the interpolaiton depending on the time the coroutine is running having small smooth movement changes
+            //lerpunclamped allows the values in the inspector to go beyond 0 or 1 giving me the option to overshoot and have the desired elastic effect
+            transform.position = Vector3.LerpUnclamped(startPosition, endPosition, interpolation);
+            lerpTimer += Time.deltaTime;
             yield return null;
-            
         }
-        //-10 allows it to go offscreen
-        while (rgd2d.transform.position.y >= -10)
-        {
-            rgd2d.transform.Translate(transform.up  * -3 * Time.deltaTime);
-            yield return null;
-        } 
+        //old coroutine animation
+        ////this gives it a little bump then it goes down
+        //while (rgd2d.transform.position.y <= 1)
+        //{
+        //    rgd2d.transform.Translate(transform.up * 2 * Time.deltaTime);
+        //    yield return null;
+            
+        //}
+        ////-10 allows it to go offscreen
+        //while (rgd2d.transform.position.y >= -10)
+        //{
+        //    rgd2d.transform.Translate(transform.up  * -3 * Time.deltaTime);
+        //    yield return null;
+        //} 
     }
 }

@@ -2158,8 +2158,32 @@ MonoBehaviour:
   background: {fileID: 1024248808}
   Image: {fileID: 2131071927}
   rgd2d: {fileID: 1024248807}
-  selected: 0
-  selectable: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.006252289
+      value: -0.0043792725
+      inSlope: -0.6162063
+      outSlope: -0.6162063
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.25785992
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 4.298245
+      outSlope: 4.298245
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05063296
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  lerpTimer: 0
+  interpolation: 0
   Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
 --- !u!114 &1024248811
 MonoBehaviour:
@@ -3530,8 +3554,32 @@ MonoBehaviour:
   background: {fileID: 1747764502}
   Image: {fileID: 814499215}
   rgd2d: {fileID: 1747764501}
-  selected: 0
-  selectable: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0125
+      value: 0.000007495284
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.0062561
+      value: 1
+      inSlope: 4.823973
+      outSlope: 4.823973
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050320286
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  lerpTimer: 0
+  interpolation: 0
   Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
 --- !u!114 &1747764505
 MonoBehaviour:
@@ -4553,8 +4601,32 @@ MonoBehaviour:
   background: {fileID: 2081937008}
   Image: {fileID: 826935686}
   rgd2d: {fileID: 2081937007}
-  selected: 0
-  selectable: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.017940521
+      value: 0.003479004
+      inSlope: -0.541027
+      outSlope: -0.541027
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.28721222
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 4.385964
+      outSlope: 4.385964
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.049649436
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  lerpTimer: 0
+  interpolation: 0
   Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
 --- !u!114 &2081937011
 MonoBehaviour:
